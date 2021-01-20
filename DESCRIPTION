@@ -1,0 +1,16 @@
+Package: VisualisingHealthTrajectories
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Patrick Lomp <patricklomp98@gmail.com>
+Maintainer: The package maintainer <patricklomp98@gmail.com>
+Description: Can be used to browse the results of patterns found in medical data
+    and do further characterization on trajectories of interest. 
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
