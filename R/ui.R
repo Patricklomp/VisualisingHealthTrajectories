@@ -15,13 +15,16 @@ make_ui <- function() {
                     tabPanel("Network view",
                              sidebarPanel(
                                tags$h3("Search:"),
+                               sliderInput("opacity",
+                                           "Opacity",
+                                           min = 0.1,
+                                           max = 1,
+                                           value = 0.4),
                                textInput("code", "Search for code:", "")
                              ), # sidebarPanel
                              mainPanel(
                                h1("Result"),
-                               forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
-                                            Target = "target", Value = "value", NodeID = "name",
-                                            Group = "group", opacity = 1)
+                               forceNetworkOutput(outputId = "forceNet")
 
                              ) # mainPanel
 
@@ -32,7 +35,8 @@ make_ui <- function() {
                                textInput("code", "Search for code:", "")
                              ), # sidebarPanel
                              mainPanel(
-                               h1("Result")
+                               h1("Result"),
+                               sankeyNetworkOutput(outputId = "sankeyNet")
                              ) # mainPanel
 
                     ),
