@@ -1,57 +1,52 @@
 # Load R packages
 library(shiny)
+library(shinysky)
 library(shinythemes)
 # https://www.htmlwidgets.org/showcase_networkD3.html
 library(networkD3)
 library("data.table")
 library(DT)
+library(visNetwork)
 
+# Define UI
+ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
+                navbarPage(
+                  "Trajectories",
+                  tabPanel("Network view",
+                           absolutePanel(
+                             top = 200, left = 10, draggable = TRUE, width = "20%", style = "z-index:500; min-width: 300px;",
+                             tags$h3("Search:"),
+                             uiOutput("weight_radiobox"),
+                             sliderInput("effect_value",
+                                        "effect",
+                                        min = 1,
+                                        max = 100,
+                                        value = 1.5),
+                             checkboxInput("active", "Use filter", FALSE),
+                             uiOutput("icd_select2input")
+                           ), # sidebarPanel
+                            visNetworkOutput("network", width = "100%", height = "90vh")
+                  ),
+                  tabPanel("Linear view",
+                           sidebarPanel(
+                             tags$h3("Search:"),
+                           ), # sidebarPanel
+                           mainPanel(
+                             h1("Result"),
+                             sankeyNetworkOutput(outputId = "sankeyNet")
+                           ) # mainPanel
 
-make_ui <- function() {
-  # Define UI
-  ui <- fluidPage(theme = shinytheme("flatly"),
-                  navbarPage(
-                    "Trajectories",
-                    tabPanel("Network view",
-                             sidebarPanel(
-                               tags$h3("Search:"),
-                               sliderInput("opacity",
-                                           "Opacity",
-                                           min = 0.1,
-                                           max = 1,
-                                           value = 0.4),
-                               textInput("code", "Search for code:", "")
-                             ), # sidebarPanel
-                             mainPanel(
-                               h1("Result"),
-                               forceNetworkOutput(outputId = "forceNet")
+                  ),
+                  tabPanel("Raw data",
+                           mainPanel(
+                             h1("Data table"),
+                             DT::dataTableOutput("table")
+                           ) # mainPanel
 
-                             ) # mainPanel
+                  ),
+                  tabPanel("Guide", "This panel is intentionally left blank"),
+                  tabPanel("About", "This panel is intentionally left blank")
 
-                    ),
-                    tabPanel("Linear view",
-                             sidebarPanel(
-                               tags$h3("Search:"),
-                               textInput("code", "Search for code:", "")
-                             ), # sidebarPanel
-                             mainPanel(
-                               h1("Result"),
-                               sankeyNetworkOutput(outputId = "sankeyNet")
-                             ) # mainPanel
+                ) # navbarPage
+  )) # fluidPage
 
-                    ),
-                    tabPanel("Raw data",
-                             mainPanel(
-                               h1("Data table"),
-                               DT::dataTableOutput("table")
-                             ) # mainPanel
-
-                    ),
-                    tabPanel("Guide", "This panel is intentionally left blank"),
-                    tabPanel("About", "This panel is intentionally left blank")
-
-                  ) # navbarPage
-  ) # fluidPage
-
-  return(ui)
-}
