@@ -14,8 +14,9 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                   "Trajectories",
                   tabPanel("Network view",
                            absolutePanel(
-                             top = 200, left = 10, draggable = TRUE, width = "20%", style = "z-index:500; min-width: 300px;",
-                             tags$h3("Search:"),
+                             top = 200, left = 10, draggable = TRUE, width = "20%", style = "z-index:500; min-width: 300px; background-color: rgba(44, 62, 80, 0.2); padding: 20px",
+                             tags$h2("Search:"),
+                             uiOutput("icd_select2input"),
                              uiOutput("weight_radiobox"),
                              sliderInput("effect_value",
                                         "effect",
@@ -23,7 +24,7 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                                         max = 100,
                                         value = 1.5),
                              checkboxInput("active", "Use filter", FALSE),
-                             uiOutput("icd_select2input")
+                             uiOutput("condition_checkbox")
                            ), # sidebarPanel
                             visNetworkOutput("network", width = "100%", height = "90vh")
                   ),

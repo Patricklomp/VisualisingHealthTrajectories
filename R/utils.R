@@ -1,9 +1,11 @@
+
 GraphFilter <- setClass(
   "GraphFilter",
   slots = c(
     use_for_weight = "character",
     effect_value = "numeric",
-    active = "logical"
+    active = "logical",
+    selected_icd_codes = list("character")
   )
 )
 
@@ -19,11 +21,10 @@ make_links_from_data = function(data) {
 
   # Prepare edges
   edges = data %>%
-    rename(from = D1, to = D2) %>%
-    mutate(EFFECT_IN_ESTONIA = coalesce(EFFECT_IN_ESTONIA, 0)) %>%
-    mutate(EFFECT_IN_DENMARK = coalesce(EFFECT_IN_DENMARK, 0)) %>%
-    mutate(COUNT_IN_ESTONIA = coalesce(COUNT_IN_ESTONIA, 0)) %>%
-    mutate(COUNT_IN_DENMARK = coalesce(COUNT_IN_DENMARK, 0))
+    rename(from = E1_CONCEPT_ID, to = E2_CONCEPT_ID) %>%
+    mutate(E1_AND_E2_TOGETHER_COUNT_IN_EVENTS = coalesce(E1_AND_E2_TOGETHER_COUNT_IN_EVENTS, 0)) %>%
+    mutate(RR = coalesce(RR, 0)) %>%
+    select(from, to, RR, E1_AND_E2_TOGETHER_COUNT_IN_EVENTS)
 
   return(as.data.frame(edges))
 }
@@ -31,9 +32,9 @@ make_links_from_data = function(data) {
 make_nodes_from_data = function(data) {
   flog.info("Making nodes from data")
 
-  nodes = tibble(
-    name = unique(c(data$D1, data$D2))
-  )
+  nodes = tibble(name = unique(c(
+    data$E1_CONCEPT_ID, data$E2_CONCEPT_ID
+  )))
 
   nodes = nodes %>%
     left_join(icd, by = c("name" = "code")) %>%
