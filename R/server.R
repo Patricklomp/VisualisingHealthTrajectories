@@ -6,7 +6,7 @@ library(DT)
 library(shiny)
 library(shinythemes)
 # https://www.htmlwidgets.org/showcase_networkD3.html
-library(networkD3)
+library(plotly)
 library("data.table")
 library(icd)
 library(tidyverse)
@@ -35,7 +35,7 @@ make_server <- function(data) {
         "GraphFilter",
         active = input$active,
         use_for_weight = ifelse(!is.null(input$use_for_weight),input$use_for_weight,"RR"),
-        effect_value = input$effect_value,
+        effect_value = ifelse(!is.null(input$effect_value),input$effect_value,0),
         selected_icd_codes = ifelse(!is.null(input$input$selected_icd_codes),input$input$selected_icd_codes,"")
       )
     })
@@ -71,24 +71,42 @@ make_server <- function(data) {
         ) %>%
         visEdges(arrows = "to",
                  color = list(highlight = "#C62F4B")) %>%
-        visOptions(highlightNearest = TRUE) %>%
+        visOptions(highlightNearest = list(enabled = T, degree = 2)) %>%
         visLayout(randomSeed = 11) %>%
         visInteraction(navigationButtons = TRUE) %>%
         visLegend(width = 0.3)
     })
 
-    output$sankeyNet <- renderSankeyNetwork(
-      sankeyNetwork(
-        Links    = nodesandedges()$edges,
-        Nodes   = nodesandedges()$nodes,
-        Source   = "from",
-        Target  = "to",
-        Value    = "value",
-        NodeID  = "id",
-        fontSize = 12,
-        nodeWidth = 30
+    output$sankeyNet <- renderPlotly({
+      plot_ly(
+        type = "sankey",
+        orientation = "h",
+
+        node = list(
+          label = select(nodesandedges()$nodes, id),
+          pad = 15,
+          thickness = 20,
+          line = list(
+            color = "black",
+            width = 0.5
+          )
+        ),
+
+        link = list(
+          source = select(nodesandedges()$edges, from),
+          target = select(nodesandedges()$edges, to),
+          value =  select(nodesandedges()$edges, value)
+        )
       )
-    )
+    })
+
+    output$weight_slider <- renderUI({
+      sliderInput("effect_value",
+                  "effect",
+                  min = min(edges %>% select(!!as.symbol(graph_filter()@use_for_weight)), na.rm = TRUE),
+                  max = max(edges %>% select(!!as.symbol(graph_filter()@use_for_weight)), na.rm = TRUE),
+                  value = graph_filter()@effect_value)
+    })
 
     output$weight_radiobox <- renderUI({
       radioButtons(
@@ -110,12 +128,11 @@ make_server <- function(data) {
       )
     })
 
-
     output$icd_select2input <- renderUI({
       selectInput(
         "selected_icd_codes",
         label = h3("Select icd codes"),
-        choices = nodes %>% rename(value = id, name = CodeDescription),
+        choices =  nodes$id,
         selected = list(NULL),
         multiple = TRUE
       )

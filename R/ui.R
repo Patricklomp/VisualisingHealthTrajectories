@@ -18,11 +18,7 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                              tags$h2("Search:"),
                              uiOutput("icd_select2input"),
                              uiOutput("weight_radiobox"),
-                             sliderInput("effect_value",
-                                        "effect",
-                                        min = 1,
-                                        max = 100,
-                                        value = 1.5),
+                             uiOutput("weight_slider"),
                              checkboxInput("active", "Use filter", FALSE),
                              uiOutput("condition_checkbox")
                            ), # sidebarPanel
@@ -34,7 +30,7 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                            ), # sidebarPanel
                            mainPanel(
                              h1("Result"),
-                             sankeyNetworkOutput(outputId = "sankeyNet")
+                             plotlyOutput("sankeyNet")
                            ) # mainPanel
 
                   ),
