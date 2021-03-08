@@ -1,17 +1,21 @@
-
 GraphFilter <- setClass(
   "GraphFilter",
   slots = c(
+    active = "logical",
     use_for_weight = "character",
     effect_value = "numeric",
-    active = "logical",
-    selected_icd_codes = list("character")
+    importance_value = "numeric",
+    selected_icd_codes = "list",
+    use_network_view = "logical"
   )
 )
 
+#' Get test data that can be used with visualize_data_pairs(data) function
+#'
+#' @examples
+#' get_test_data()
 get_test_data = function() {
   test_data = as.data.frame(read_xlsx(test_data_source))
-
   flog.info("Got test data from: %s", test_data_source)
   return(test_data)
 }
@@ -39,7 +43,7 @@ make_nodes_from_data = function(data) {
   nodes = nodes %>%
     left_join(icd, by = c("name" = "code")) %>%
     select(name, Description = short_desc, Chapter = chapter) %>%
-    mutate(CodeDescription = str_c(name, " - ", Description)) %>%
+    mutate(CodeDescription = paste(name, ifelse(is.na(Description), "",  paste(" - ", Description) ) )) %>%
     group_by(Chapter) %>%
     mutate(ChapterNew = str_c(min(name), " - ", max(name), ": ", Chapter)) %>%
     ungroup() %>%

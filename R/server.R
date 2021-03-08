@@ -5,6 +5,7 @@
 library(DT)
 library(shiny)
 library(shinythemes)
+library(shinyWidgets)
 # https://www.htmlwidgets.org/showcase_networkD3.html
 library(plotly)
 library("data.table")
@@ -18,6 +19,8 @@ library(visNetwork)
 library(geomnet)
 library(igraph)
 
+DEFAULT_COLUMNS_FOR_WEIGHT = c("RR", "E1_AND_E2_TOGETHER_COUNT_IN_EVENTS")
+
 load("Data/icd10cm2019.rda", verbose = T) # From icd R package
 test_data_source = "sample-data/event_pairs_tested.xlsx"
 icd = icd10cm2019 %>%
@@ -30,16 +33,6 @@ make_server <- function(data) {
   server <- function(input, output) {
     flog.info("Loading Shiny server")
 
-    graph_filter <- reactive({
-      new(
-        "GraphFilter",
-        active = input$active,
-        use_for_weight = ifelse(!is.null(input$use_for_weight),input$use_for_weight,"RR"),
-        effect_value = ifelse(!is.null(input$effect_value),input$effect_value,0),
-        selected_icd_codes = ifelse(!is.null(input$input$selected_icd_codes),input$input$selected_icd_codes,"")
-      )
-    })
-
     #create nodes dataframe
     nodes <- make_nodes_from_data(data)
     #create links dataframe
@@ -49,7 +42,18 @@ make_server <- function(data) {
     tg = tbl_graph(nodes, edges)
     nodesandedges <-
       reactive({
-        filter_nodes_and_edges(tg, graph_filter())
+        icd_codes = data.frame(input$selected_icd_codes)
+        graph_filter <-
+          new(
+            "GraphFilter",
+            active = input$active,
+            use_for_weight = ifelse(!is.null(input$use_for_weight),input$use_for_weight,"RR"),
+            effect_value = ifelse(!is.null(input$effect_value),input$effect_value,0),
+            importance_value = input$importance_value,
+            use_network_view = ifelse(!is.null(input$network_view_switch),input$network_view_switch, TRUE)
+          )
+
+        return(filter_nodes_and_edges(tg, graph_filter,input$selected_icd_codes))
       })
 
     output$table <- DT::renderDataTable({
@@ -83,7 +87,7 @@ make_server <- function(data) {
         orientation = "h",
 
         node = list(
-          label = select(nodesandedges()$nodes, id),
+          label = as.list(select(nodesandedges()$nodes, title))$title,
           pad = 15,
           thickness = 20,
           line = list(
@@ -93,9 +97,9 @@ make_server <- function(data) {
         ),
 
         link = list(
-          source = select(nodesandedges()$edges, from),
-          target = select(nodesandedges()$edges, to),
-          value =  select(nodesandedges()$edges, value)
+          source = as.list(select(nodesandedges()$edges, from_row))$from_row - 1, #R counts indexes from 1, whereas plotly from 0
+          target = as.list(select(nodesandedges()$edges, to_row))$to_row - 1,
+          value =  as.list(select(nodesandedges()$edges, value))$value
         )
       )
     })
@@ -103,9 +107,17 @@ make_server <- function(data) {
     output$weight_slider <- renderUI({
       sliderInput("effect_value",
                   "effect",
-                  min = min(edges %>% select(!!as.symbol(graph_filter()@use_for_weight)), na.rm = TRUE),
-                  max = max(edges %>% select(!!as.symbol(graph_filter()@use_for_weight)), na.rm = TRUE),
-                  value = graph_filter()@effect_value)
+                  min = min(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE),
+                  max = max(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE),
+                  value = input$effect_value)
+    })
+
+    output$importance_slider <- renderUI({
+      sliderInput("importance_value",
+                  "Importance value",
+                  min = 1,
+                  max = 5, #max(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE)
+                  value = input$importance_value)
     })
 
     output$weight_radiobox <- renderUI({
@@ -128,13 +140,13 @@ make_server <- function(data) {
       )
     })
 
-    output$icd_select2input <- renderUI({
-      selectInput(
-        "selected_icd_codes",
+    output$icd_selectinput <- renderUI({
+      pickerInput(
+        inputId = "selected_icd_codes",
         label = h3("Select icd codes"),
         choices =  nodes$id,
-        selected = list(NULL),
-        multiple = TRUE
+        options = list(`actions-box` = TRUE, `liveSearch` = TRUE),
+        multiple = T
       )
     })
 
@@ -143,6 +155,11 @@ make_server <- function(data) {
   return(server)
 }
 
+#' Visualize data pairs using Shiny application
+#'
+#' @param data Data used for visualization. Has to contain columns E1_CONCEPT_ID and E2_CONCEPT_ID
+#' @examples
+#' visualize_data_pairs(data)
 visualize_data_pairs <- function(data) {
   #data validation
   if (length(colnames(data)) < 3) {

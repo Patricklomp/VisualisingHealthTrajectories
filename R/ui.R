@@ -16,23 +16,26 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                            absolutePanel(
                              top = 200, left = 10, draggable = TRUE, width = "20%", style = "z-index:500; min-width: 300px; background-color: rgba(44, 62, 80, 0.2); padding: 20px",
                              tags$h2("Search:"),
-                             uiOutput("icd_select2input"),
+                             tags$h4("Use network or sankey view"),
+                             switchInput(inputId = "network_view_switch",
+                                         value = TRUE,
+                                         onLabel = "Network view",
+                                         offLabel = "Sankey view",),
+                             uiOutput("icd_selectinput"),
                              uiOutput("weight_radiobox"),
                              uiOutput("weight_slider"),
+                             uiOutput("importance_slider"),
                              checkboxInput("active", "Use filter", FALSE),
                              uiOutput("condition_checkbox")
                            ), # sidebarPanel
-                            visNetworkOutput("network", width = "100%", height = "90vh")
-                  ),
-                  tabPanel("Linear view",
-                           sidebarPanel(
-                             tags$h3("Search:"),
-                           ), # sidebarPanel
-                           mainPanel(
-                             h1("Result"),
-                             plotlyOutput("sankeyNet")
-                           ) # mainPanel
-
+                           conditionalPanel(
+                             condition = "input.network_view_switch == 1",
+                             visNetworkOutput("network", width = "100%", height = "90vh")
+                           ),
+                           conditionalPanel(
+                             condition = "input.network_view_switch == 0",
+                             plotlyOutput("sankeyNet", width = "100%", height = "90vh")
+                           )
                   ),
                   tabPanel("Raw data",
                            mainPanel(
@@ -41,9 +44,7 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                            ) # mainPanel
 
                   ),
-                  tabPanel("Guide", "This panel is intentionally left blank"),
-                  tabPanel("About", "This panel is intentionally left blank")
-
+                  tabPanel("Guide", "This panel is intentionally left blank")
                 ) # navbarPage
   )) # fluidPage
 
