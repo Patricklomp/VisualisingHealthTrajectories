@@ -3,7 +3,8 @@ GraphFilter <- setClass(
   slots = c(
     active = "logical",
     use_for_weight = "character",
-    effect_value = "numeric",
+    RR_effect_value = "numeric",
+    E1E2Together_effect_value = "numeric",
     importance_value = "numeric",
     selected_icd_codes = "list",
     use_network_view = "logical"
@@ -39,6 +40,7 @@ make_nodes_from_data = function(data) {
   nodes = tibble(name = unique(c(
     data$E1_CONCEPT_ID, data$E2_CONCEPT_ID
   )))
+
 
   nodes = nodes %>%
     left_join(icd, by = c("name" = "code")) %>%

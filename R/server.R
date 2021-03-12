@@ -24,7 +24,7 @@ DEFAULT_COLUMNS_FOR_WEIGHT = c("RR", "E1_AND_E2_TOGETHER_COUNT_IN_EVENTS")
 load("Data/icd10cm2019.rda", verbose = T) # From icd R package
 test_data_source = "sample-data/event_pairs_tested.xlsx"
 icd = icd10cm2019 %>%
-  map( ~ as.character(.x)) %>%
+  map(~ as.character(.x)) %>%
   as_tibble()
 
 
@@ -47,13 +47,22 @@ make_server <- function(data) {
           new(
             "GraphFilter",
             active = input$active,
-            use_for_weight = ifelse(!is.null(input$use_for_weight),input$use_for_weight,"RR"),
-            effect_value = ifelse(!is.null(input$effect_value),input$effect_value,0),
+            use_for_weight = ifelse(
+              !is.null(input$use_for_weight),
+              input$use_for_weight,
+              "RR"
+            ),
+            RR_effect_value = ifelse(!is.null(input$RR_effect_value), input$RR_effect_value, 0),
+            E1E2Together_effect_value = ifelse(!is.null(input$E1E2Together_effect_value), input$E1E2Together_effect_value, 0),
             importance_value = input$importance_value,
-            use_network_view = ifelse(!is.null(input$network_view_switch),input$network_view_switch, TRUE)
+            use_network_view = ifelse(
+              !is.null(input$network_view_switch),
+              input$network_view_switch,
+              TRUE
+            )
           )
 
-        return(filter_nodes_and_edges(tg, graph_filter,input$selected_icd_codes))
+        return(filter_nodes_and_edges(tg, graph_filter, input$selected_icd_codes))
       })
 
     output$table <- DT::renderDataTable({
@@ -76,9 +85,11 @@ make_server <- function(data) {
         visEdges(arrows = "to",
                  color = list(highlight = "#C62F4B")) %>%
         visOptions(highlightNearest = list(enabled = T, degree = 2)) %>%
-        visLayout(randomSeed = 11) %>%
         visInteraction(navigationButtons = TRUE) %>%
-        visLegend(width = 0.3)
+        visLegend(width = 0.3) %>%
+        visExport(type = "jpeg", name = "export-network",
+                    float = "left", label = "Save network", background = "purple", style= "") %>%
+        visLayout(randomSeed = 11)
     })
 
     output$sankeyNet <- renderPlotly({
@@ -90,14 +101,13 @@ make_server <- function(data) {
           label = as.list(select(nodesandedges()$nodes, title))$title,
           pad = 15,
           thickness = 20,
-          line = list(
-            color = "black",
-            width = 0.5
-          )
+          line = list(color = "black",
+                      width = 0.5)
         ),
 
         link = list(
-          source = as.list(select(nodesandedges()$edges, from_row))$from_row - 1, #R counts indexes from 1, whereas plotly from 0
+          source = as.list(select(nodesandedges()$edges, from_row))$from_row - 1,
+          #R counts indexes from 1, whereas plotly from 0
           target = as.list(select(nodesandedges()$edges, to_row))$to_row - 1,
           value =  as.list(select(nodesandedges()$edges, value))$value
         )
@@ -105,40 +115,57 @@ make_server <- function(data) {
     })
 
     output$weight_slider <- renderUI({
-      sliderInput("effect_value",
-                  "effect",
-                  min = min(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE),
-                  max = max(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE),
-                  value = input$effect_value)
+      div(
+        sliderInput(
+          "RR_effect_value",
+          "Relative risk",
+          min = min(edges %>% select(
+             RR
+          ), na.rm = TRUE),
+          max = max(edges %>% select(
+             RR
+          ), na.rm = TRUE),
+          value = input$RR_effect_value
+        ),
+
+        sliderInput(
+          "E1E2Together_effect_value",
+          "Events together count",
+          min = min(edges %>% select(
+             E1_AND_E2_TOGETHER_COUNT_IN_EVENTS
+          ), na.rm = TRUE),
+          max = max(edges %>% select(
+            E1_AND_E2_TOGETHER_COUNT_IN_EVENTS
+          ), na.rm = TRUE),
+          value = input$E1E2Together_effect_value
+        )
+      )
+
+
     })
 
+
+
     output$importance_slider <- renderUI({
-      sliderInput("importance_value",
-                  "Importance value",
-                  min = 1,
-                  max = 5, #max(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE)
-                  value = input$importance_value)
+      sliderInput(
+        "importance_value",
+        "Importance value",
+        min = 1,
+        max = 5,
+        #max(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE)
+        value = input$importance_value
+      )
     })
 
     output$weight_radiobox <- renderUI({
-      radioButtons(
-        "use_for_weight",
-        "Use for weight:",
-        colnames(
-          data %>% select_if(is.numeric) %>% select(RR, E1_AND_E2_TOGETHER_COUNT_IN_EVENTS)
-        )
-      )
+      radioButtons("use_for_weight",
+                   "Use for weight:",
+                   colnames(
+                     data %>% select_if(is.numeric) %>% select(RR, E1_AND_E2_TOGETHER_COUNT_IN_EVENTS)
+                   ))
     })
 
-    output$condition_checkbox <- renderUI({
-      checkboxGroupInput(
-        "use_conditions",
-        "Add conditions:",
-        choices = colnames(
-          data %>% select_if(is.logical)
-        )
-      )
-    })
+
 
     output$icd_selectinput <- renderUI({
       pickerInput(

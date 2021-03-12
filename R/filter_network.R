@@ -30,7 +30,7 @@ create_nodes_and_edges = function(tg) {
     left_join(tg_nodes, by = c("to" = "rowid")) %>%
     rename(to_row = to) %>%
     rename(to = id) %>%
-    select(from, from_row, to, to_row, value, importance)
+    select(from, from_row, to, to_row, value, importance, RR, E1_AND_E2_TOGETHER_COUNT_IN_EVENTS)
 
 
   tg_nodes <- select(tg_nodes, -rowid) %>%
@@ -44,9 +44,10 @@ create_nodes_and_edges = function(tg) {
 filter_nodes_and_edges = function(tg, filter, selected_icd_codes) {
   flog.info("Filtering dataset")
   active <- filter@active
-  use_for_weights <- filter@use_for_weight
-  effect <- filter@effect_value
-
+  use_for_weight <- filter@use_for_weight
+  RR_effect_value <- filter@RR_effect_value
+  E1E2Together_effect_value <- filter@E1E2Together_effect_value
+  importance_value <- filter@importance_value
 
 
 
@@ -60,18 +61,18 @@ filter_nodes_and_edges = function(tg, filter, selected_icd_codes) {
   }
 
   #Filter by weight
-  for (weight in use_for_weights){
-    tg = tg %>%
-      activate(edges) %>%
-      filter(!!as.symbol(weight) > effect) %>%
-      mutate(value = !!as.symbol(weight))
-  }
+  tg = tg %>%
+    activate(edges) %>%
+    filter(RR > RR_effect_value) %>%
+    filter(E1_AND_E2_TOGETHER_COUNT_IN_EVENTS > E1E2Together_effect_value) %>%
+    mutate(value = !!as.symbol(use_for_weight))
+
 
   #Filter by importance
   tg = tg %>%
     activate(edges) %>%
     mutate(importance = centrality_edge_betweenness()) %>%
-    filter(importance >= 2)
+    filter(importance >= importance_value)
 
   #Filter by icd codes
   print(selected_icd_codes)
