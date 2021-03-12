@@ -13,7 +13,7 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                 navbarPage(
                   "Trajectories",
                   tabPanel("Network view",
-                           dropdown(
+                           sidebarPanel(
                              tags$h2("Search:"),
                              tags$h4("Use network or sankey view"),
                              switchInput(inputId = "network_view_switch",
@@ -27,6 +27,7 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                              prettyCheckbox(inputId = "active", label = "Enable filter", icon = icon("check"), value = FALSE),
                              label = "Filter"
                            ), # sidebarPanel
+                           mainPanel(
                            conditionalPanel(
                              condition = "input.network_view_switch == 1",
                              visNetworkOutput("network", width = "100%", height = "90vh")
@@ -34,7 +35,7 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                            conditionalPanel(
                              condition = "input.network_view_switch == 0",
                              plotlyOutput("sankeyNet", width = "100%", height = "90vh")
-                           ),
+                           )),
 
                            status = 'primary'
                   ),

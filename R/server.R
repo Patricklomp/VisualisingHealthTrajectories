@@ -54,7 +54,7 @@ make_server <- function(data) {
             ),
             RR_effect_value = ifelse(!is.null(input$RR_effect_value), input$RR_effect_value, 0),
             E1E2Together_effect_value = ifelse(!is.null(input$E1E2Together_effect_value), input$E1E2Together_effect_value, 0),
-            importance_value = input$importance_value,
+            importance_value = ifelse(!is.null(input$importance_value), input$importance_value, 0),
             use_network_view = ifelse(
               !is.null(input$network_view_switch),
               input$network_view_switch,
