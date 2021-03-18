@@ -43,22 +43,10 @@ create_nodes_and_edges = function(tg) {
 
 filter_nodes_and_edges = function(tg, filter, selected_icd_codes) {
   flog.info("Filtering dataset")
-  active <- filter@active
   use_for_weight <- filter@use_for_weight
   RR_effect_value <- filter@RR_effect_value
   E1E2Together_effect_value <- filter@E1E2Together_effect_value
   importance_value <- filter@importance_value
-
-
-
-  #Check if filtering is active
-  if (!active) {
-    tg = tg %>%
-      activate(edges) %>%
-      mutate(value = RR) %>%
-      mutate(importance = centrality_edge_betweenness())
-    return(create_nodes_and_edges(tg))
-  }
 
   #Filter by weight
   tg = tg %>%

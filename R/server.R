@@ -40,13 +40,13 @@ make_server <- function(data) {
 
     #Get filtered nodes and edges
     tg = tbl_graph(nodes, edges)
+
     nodesandedges <-
       reactive({
         icd_codes = data.frame(input$selected_icd_codes)
         graph_filter <-
           new(
             "GraphFilter",
-            active = input$active,
             use_for_weight = ifelse(
               !is.null(input$use_for_weight),
               input$use_for_weight,

@@ -24,7 +24,6 @@ ui <- shinyUI(fluidPage(theme = shinytheme("flatly"),
                              uiOutput("weight_radiobox"),
                              uiOutput('weight_slider'),
                              uiOutput("importance_slider"),
-                             prettyCheckbox(inputId = "active", label = "Enable filter", icon = icon("check"), value = FALSE),
                              label = "Filter"
                            ), # sidebarPanel
                            mainPanel(

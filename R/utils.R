@@ -1,7 +1,6 @@
 GraphFilter <- setClass(
   "GraphFilter",
   slots = c(
-    active = "logical",
     use_for_weight = "character",
     RR_effect_value = "numeric",
     E1E2Together_effect_value = "numeric",
