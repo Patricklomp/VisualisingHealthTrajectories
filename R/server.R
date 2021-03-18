@@ -14,7 +14,7 @@ library(tidyverse)
 library(tidygraph)
 library(readxl)
 library(futile.logger)
-
+library(shinydashboard)
 library(visNetwork)
 library(geomnet)
 library(igraph)
@@ -125,7 +125,7 @@ make_server <- function(data) {
           max = max(edges %>% select(
              RR
           ), na.rm = TRUE),
-          value = input$RR_effect_value
+          value = 1
         ),
 
         sliderInput(
@@ -137,7 +137,7 @@ make_server <- function(data) {
           max = max(edges %>% select(
             E1_AND_E2_TOGETHER_COUNT_IN_EVENTS
           ), na.rm = TRUE),
-          value = input$E1E2Together_effect_value
+          value = 1
         )
       )
 
@@ -153,7 +153,7 @@ make_server <- function(data) {
         min = 1,
         max = 5,
         #max(edges %>% select(!!as.symbol(input$use_for_weight)), na.rm = TRUE)
-        value = input$importance_value
+        value = 1
       )
     })
 
