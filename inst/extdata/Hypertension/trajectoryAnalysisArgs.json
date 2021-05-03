@@ -1,0 +1,16 @@
+{
+  "minimumDaysBetweenEvents": [1],
+  "maximumDaysBetweenEvents": [3650],
+  "minPatientsPerEventPair": [200],
+  "addConditions": [true],
+  "addObservations": [false],
+  "addProcedures": [true],
+  "addDrugExposures": [true],
+  "addDrugEras": [false],
+  "addBirths": [true],
+  "addDeaths": [true],
+  "daysBeforeIndexDate": ["Inf"],
+  "packageName": ["Trajectories"],
+  "cohortName": ["Hypertension"],
+  "description": ["Hypertension study"]
+}

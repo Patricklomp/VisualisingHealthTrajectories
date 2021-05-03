@@ -1,0 +1,27 @@
+/* selected codes */
+
+#selected_id_codes ~ .multi-wrapper{
+  color: black;
+}
+
+#selected_id_codes ~ .multi-wrapper .item{
+  color: black;
+}
+
+#selected_distance{
+  display: inline;
+  max-width: 50px;
+  margin-left: 10px;
+}
+
+/* tooltip */
+
+.tooltip-container{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.tooltip-button{
+  padding: 2px 6px;
+  margin: 0 5px;
+}

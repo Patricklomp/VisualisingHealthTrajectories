@@ -1,16 +1,31 @@
-Package: VisualisingHealthTrajectories
+Package: Trajectories
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Patrick Lomp <patricklomp98@gmail.com>
-Maintainer: The package maintainer <patricklomp98@gmail.com>
-Description: Can be used to browse the results of patterns found in medical data
-    and do further characterization on trajectories of interest. 
-License: What license is it under?
-Encoding: UTF-8
+Title: Tool to detect and visualize temporal event trajectories in OMOP common data model
+Version: 0.0.1
+Date: 2020-04-07
+Description: Takes events from OMOP CDM database, detects significant directional event pairs, visualizes them.
 LazyData: true
+Authors@R: c(
+    person("Kadri", "Künnapuu", , "kadri.kunnapuu@stacc.ee", role = c("aut", "cre")),
+    person("Kadri", "Ligi", role = c("aut")),
+    person("Raivo", "Kolde", role = c("aut")),
+    person("Sulev", "Reisberg", role = c("aut")),
+    person("Sven", "Laur", role = c("aut"))
+    )
+Maintainer: Kadri Künnapuu <kadri.kunnapuu@stacc.ee>
+License: GPL-3
+Depends:
+    R (>= 3.2.2),
+    DatabaseConnector (>= 2.2.0),
+    dplyr (>= 0.8.5),
+    SqlRender (>= 1.5.2),
+    logger (>= 0.1),
+    stringi (>= 1.4.5),
+    openxlsx (>= 4.1.4),
+    jsonlite (>= 1.7.1)
+Imports:
+    igraph (>= 1.2.5)
+Encoding: UTF-8
 RoxygenNote: 7.1.1
 Suggests: 
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr
+    testthat (>= 2.1.0)

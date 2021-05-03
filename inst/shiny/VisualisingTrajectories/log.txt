@@ -1,0 +1,247 @@
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:09:45[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:09:45[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:09:45[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:09:45[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:09:46[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:09:48[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:34[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:34[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:35[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:37[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:39[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:45[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:50[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:52[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:54[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:10:56[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:02[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:12[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:15[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:24[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:24[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:33[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:45[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:48[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:11:50[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:08[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:10[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:11[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:12[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:12[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:48[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:49[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:50[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:52[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:14:53[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:07[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:08[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:14[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:15[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:16[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:17[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:18[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:20[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:22[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:27[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:30[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:32[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:33[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:36[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:38[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:40[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:47[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:52[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:53[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:54[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:56[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:57[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:59[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:15:59[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:02[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:16[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:21[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:24[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:45[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:50[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:53[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:54[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:58[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:58[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:16:59[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:04[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:07[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:07[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:14[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:15[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:16[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:17[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 09:17:17[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:13[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:15[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:27[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:29[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:30[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:31[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:32[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:33:33[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:34:23[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:34:23[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:34:25[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:34:26[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:34:27[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:34:31[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:34:44[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-23 10:39:50[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 09:18:01[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 09:18:01[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 09:18:01[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 09:18:01[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 09:18:01[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 09:18:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 09:18:07[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-26 13:17:18[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 09:51:14[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 09:51:15[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 09:51:16[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:56:38[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:06[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:08[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:10[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:10[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:12[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:13[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:14[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:52[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:53[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:55[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:55[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:56[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:57:56[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:58:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:58:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:58:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:58:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:58:08[23m] [38;5;246mFilter has been reset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:59:41[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 10:59:43[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:22[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:22[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:22[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:22[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:22[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:24[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:32[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:32[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:32[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:32[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:01:35[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:50[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:50[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:50[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:50[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:50[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:51[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:57[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:57[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:57[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:58[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:03:59[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:06:05[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:06:08[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:08:16[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:08:16[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:08:16[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:08:16[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:08:16[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-27 11:08:18[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:28:55[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:28:55[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:28:55[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:28:55[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:28:56[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:28:58[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:29:08[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:29:08[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:29:08[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:29:08[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-04-29 17:29:09[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:12:28[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:12:28[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:12:28[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:12:28[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:12:28[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:12:29[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:24[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:24[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:24[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:24[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:24[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:25[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:27[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:13:28[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:03[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:03[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:03[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:03[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:04[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:43[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:44[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:44[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:44[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:44[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:47[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:53[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:55[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:56[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:57[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:58[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:58[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 13:14:59[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:03:00[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:03:00[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:03:00[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:03:00[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:03:00[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:03:01[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:03:30[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:05:32[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:05:32[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:05:32[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:05:32[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:05:32[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 15:05:33[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:01[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:01[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:01[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:01[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:01[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:03[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:05[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:07[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:07[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:09[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:10[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:16[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:22[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:25[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:32[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:34[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:34[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:35[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-01 16:03:39[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-03 09:20:25[23m] [38;5;246mGot test data from: %sData/event_pairs_tested.xlsx[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-03 09:20:25[23m] [38;5;246mLoading Shiny server[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-03 09:20:26[23m] [38;5;246mMaking nodes from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-03 09:20:26[23m] [38;5;246mMaking edges from data[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-03 09:20:26[23m] [38;5;246mFiltering dataset[39m[0m[0m
+[1m[0mINFO[0m[0m[0m[22m [[3m2021-05-03 09:20:28[23m] [38;5;246mFiltering dataset[39m[0m[0m
