@@ -1,3 +1,16 @@
+# Shiny application
+The goal of the thesis is to produce an interactive tool to visualize medical data analysis results using graphs. The interactive tool is a part of a larger R package called Trajectories. Trajectories package has an algorithm that identifies common sequences of events in medical data. Such trajectories of diagnoses, drug prescriptions and procedures can get rather complicated and good visualisation methods are needed for finding relevant patterns in the data. In this thesis, a Shiny application was made, which can be used to browse the results of patterns found in medical data and do further characterization of trajectories of interest.
+
+## App code location
+The code that author is responsible for can be found under [inst/shiny](inst/shiny) folder. Also to integrate the app with Trajectories [R/VisualisingTrajectories.R](R/VisualisingTrajectories.R) file was made. The rest of the package is developed by Trajectories team.
+
+## Code usage order:
+1. To start the application first follow Trajectories Installation guide.
+2. Make sure you have Trajectories algorithm analysis result file to use the visualisation with. Test files can be found under [inst/shiny/VisualisingTrajectories/Data](inst/shiny/VisualisingTrajectories/Data). For example to get data you can use command: `data <- as.data.frame(read.xlsx("inst/shiny/VisualisingTrajectories/Data/event_pairs_tested_2.xlsx"))`. 
+3. Then you can start the app using `Trajectories::visualize_data_pairs(data)`, where `data` is the file described above.
+ 
+ 
+
 # Trajectories R-package
 
 To detect an visualize statistically significant event sequencies in OMOP data.
